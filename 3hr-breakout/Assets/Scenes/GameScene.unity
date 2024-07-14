@@ -127,23 +127,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4950528694655763114, guid: 9328da00bd4064650a49ff6d3aaf0f09, type: 3}
   m_PrefabInstance: {fileID: 7070016498903208034}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &208643184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6289521771682290085, guid: 54831e0ae43fd46e9b5a313dce18c40c, type: 3}
-  m_PrefabInstance: {fileID: 5694609521263293699}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &208643189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208643184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60d842f6cb9a344c198b6b199b01f7a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,9 +227,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.45925924
+    width: 0.32031253
+    height: 0.3203125
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1421,10 +1404,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6289521771682290085, guid: 54831e0ae43fd46e9b5a313dce18c40c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 208643189}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54831e0ae43fd46e9b5a313dce18c40c, type: 3}
 --- !u!1 &6638815728521058627
 GameObject:
