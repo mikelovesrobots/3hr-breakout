@@ -173,4 +173,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boundaryLeft: -5.87
   boundaryRight: 5.87
-  paddleImpactForce: 300
+  paddleImpactForce: 100
