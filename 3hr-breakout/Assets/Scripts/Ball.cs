@@ -4,17 +4,28 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float initialForce = 2f;
+    private Rigidbody2D rb;
+    public float currentSpeed = 4f;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void Start()
     {
         StartMoving();
     }
 
+    private void FixedUpdate()
+    {
+        AdjustVelocityIfNecessary();
+    }
+
     public void StartMoving()
     {
         var randomDirection = new Vector2(Random.Range(-1f, 1f), 1).normalized;
-        GetComponent<Rigidbody2D>().velocity = randomDirection * 2f;
+        rb.velocity = randomDirection * currentSpeed;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -23,5 +34,10 @@ public class Ball : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void AdjustVelocityIfNecessary()
+    {
+        rb.velocity = rb.velocity.normalized * currentSpeed;
     }
 }
