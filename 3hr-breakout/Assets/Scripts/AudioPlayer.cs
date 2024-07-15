@@ -8,6 +8,7 @@ public class AudioPlayer : MonoBehaviour
     public AudioSource[] blockAudioSources;
     public AudioSource paddleAudioSource;
     public AudioSource wallAudioSource;
+    public AudioSource loseAudioSource;
 
     void Awake()
     {
@@ -27,5 +28,10 @@ public class AudioPlayer : MonoBehaviour
     public void PlayWallSound()
     {
         wallAudioSource.Play();
+    }
+
+    public void PlayLoseSound()
+    {
+        loseAudioSource.Play();
     }
 }

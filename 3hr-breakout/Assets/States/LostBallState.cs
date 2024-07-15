@@ -10,9 +10,10 @@ public class LostBallState : State
 
     public override void OnEnterState()
     {
+        AudioPlayer.instance.PlayLoseSound();
         if (GameState.instance.ballsLeft > 0)
         {
-            stateMachine.SwitchState(volleyingState);
+            WaitThenVolley();
         }
         else
         {
@@ -22,5 +23,11 @@ public class LostBallState : State
 
     public override void OnExitState()
     {
+    }
+
+    IEnumerator WaitThenVolley()
+    {
+        yield return new WaitForSeconds(1.0f);
+        stateMachine.SwitchState(volleyingState);
     }
 }

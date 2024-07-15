@@ -9,6 +9,12 @@ public class EnterState : State
 
     public override void OnEnterState()
     {
+        StartCoroutine(WaitThenVolley());
+    }
+
+    IEnumerator WaitThenVolley()
+    {
+        yield return new WaitForSeconds(1.0f);
         stateMachine.SwitchState(volleyingState);
     }
 }
