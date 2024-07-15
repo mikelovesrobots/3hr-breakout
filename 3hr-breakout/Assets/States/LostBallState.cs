@@ -13,7 +13,7 @@ public class LostBallState : State
         AudioPlayer.instance.PlayLoseSound();
         if (GameState.instance.ballsLeft > 0)
         {
-            WaitThenVolley();
+            StartCoroutine(WaitThenVolley());
         }
         else
         {
