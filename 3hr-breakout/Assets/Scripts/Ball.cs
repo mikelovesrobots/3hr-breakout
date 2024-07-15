@@ -5,7 +5,6 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float currentSpeed = 4f;
 
     private void Awake()
     {
@@ -25,7 +24,7 @@ public class Ball : MonoBehaviour
     public void StartMoving()
     {
         var randomDirection = new Vector2(Random.Range(-1f, 1f), 1).normalized;
-        rb.velocity = randomDirection * currentSpeed;
+        rb.velocity = randomDirection * GameState.instance.ballSpeed;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -38,6 +37,6 @@ public class Ball : MonoBehaviour
 
     private void AdjustVelocityIfNecessary()
     {
-        rb.velocity = rb.velocity.normalized * currentSpeed;
+        rb.velocity = rb.velocity.normalized * GameState.instance.ballSpeed;
     }
 }
