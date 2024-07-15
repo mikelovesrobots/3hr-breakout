@@ -260,9 +260,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.45925924
-    width: 0.32031253
-    height: 0.3203125
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockWidth: 0.79875
   blockHeight: 0.3
-  bottomRowY: -0.7770949
+  bottomRowY: 0.3529051
   blocksPerRow: 16
   blockParent: {fileID: 1674034310}
 --- !u!1 &566943446
