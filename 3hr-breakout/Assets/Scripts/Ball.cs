@@ -32,6 +32,7 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("BottomWall"))
         {
             Destroy(gameObject);
+            PlayController.instance.SwitchState("LostBall");
         }
     }
 
