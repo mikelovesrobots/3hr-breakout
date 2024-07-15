@@ -21,6 +21,7 @@ public class Paddle : MonoBehaviour
         {
             var contact = collision.GetContact(0);
             ReflectBall(collision.gameObject, contact.point);
+            PlayAudio();
         }
     }
 
@@ -39,5 +40,10 @@ public class Paddle : MonoBehaviour
 
         // Apply new velocity
         ballRb.velocity = reflectionDirection;
+    }
+
+    private void PlayAudio()
+    {
+        AudioPlayer.instance.PlayPaddleSound();
     }
 }

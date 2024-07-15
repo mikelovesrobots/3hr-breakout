@@ -174,5 +174,3 @@ MonoBehaviour:
   boundaryLeft: -5.87
   boundaryRight: 5.87
   maxReflectionAngle: 60
-  minBallSpeed: 5
-  maxBallSpeed: 15

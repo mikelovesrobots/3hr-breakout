@@ -14,6 +14,8 @@ public class Block : MonoBehaviour
             GameState.instance.currentLevel = Math.Max(GameState.instance.currentLevel, blockLevel);
             GameState.instance.score += blockLevel * 100;
 
+            AudioPlayer.instance.PlayBlockSound(blockLevel);
+
             // Destroy the block
             Destroy(gameObject);
         }
